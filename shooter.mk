@@ -204,4 +204,5 @@ $(call inherit-product, build/target/product/full_base_telephony.mk)
 
 PRODUCT_NAME := htc_shooter
 PRODUCT_DEVICE := shooter
+PRODUCT_BRAND := sprint
 
