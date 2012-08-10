@@ -50,10 +50,10 @@ $(call inherit-product-if-exists, vendor/htc/shooter/shooter-vendor.mk)
 
 ## CDMA Sprint stuffs
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.com.google.clientidbase=android-sprint-us \
-	ro.com.google.locationfeatures=1 \
-	ro.cdma.home.operator.numeric=310120 \
-	ro.cdma.home.operator.alpha=Sprint
+    ro.com.google.clientidbase=android-sprint-us \
+    ro.com.google.locationfeatures=1 \
+    ro.cdma.home.operator.numeric=310120 \
+    ro.cdma.home.operator.alpha=Sprint
 
 ## misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -186,6 +186,23 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/libhtcdm.so:system/lib/libhtcdm.so \
     device/htc/shooter/prebuilt/dmagent:system/bin/dmagent \
     device/htc/shooter/prebuilt/wimaxDaemon:system/bin/wimaxDaemon
+
+# Live Wallpapers
+PRODUCT_PACKAGES += \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    VisualizationWallpapers \
+    librs_jni
+
+# for bugmailer
+ifneq ($(TARGET_BUILD_VARIANT),user)
+    PRODUCT_PACKAGES += send_bug
+    PRODUCT_COPY_FILES += \
+        system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
+        system/extras/bugmailer/send_bug:system/bin/send_bug
+endif
+
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 $(call inherit-product-if-exists, vendor/htc/shooter/shooter-vendor.mk)
 
