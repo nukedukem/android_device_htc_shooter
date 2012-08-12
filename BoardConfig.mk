@@ -77,6 +77,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 
 # Try to build the kernel
+TARGET_KERNEL_SOURCE := kernel/htc/shooter
 TARGET_KERNEL_CONFIG := shooter_defconfig
 TARGET_PREBUILT_KERNEL := device/htc/shooter/prebuilt/zImage
 
