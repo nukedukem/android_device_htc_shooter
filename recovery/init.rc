@@ -13,6 +13,7 @@ on init
     chmod 0755 /sbin/busybox
 
     mkdir /sdcard
+    mkdir /usbdisk
     mkdir /system
     mkdir /data
     mkdir /data/data
