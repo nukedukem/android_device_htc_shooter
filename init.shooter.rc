@@ -7,7 +7,11 @@ on early-init
 	# for backwards compatibility
 	symlink /storage/sdcard0 /sdcard
 	symlink /storage/sdcard0 /mnt/sdcard
-	mkdir /mnt/usbdisk 0755 system system
+	
+	# create directory for mounting usb drives
+	mkdir /storage/usbdisk 0666 system system
+	symlink /storage/usbdisk /mnt/usbdisk
+	symlink /mnt/usbdisk /usbdisk
 
 on early-fs
     mkdir /system
