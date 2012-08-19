@@ -1,5 +1,5 @@
 #
-# system.prop for device
+# system.prop for shooter
 #
 
 debug.fb.rgb565 = 0
@@ -74,4 +74,3 @@ ro.qualcomm.cabl=1
 
 # Engineer ID
 ro.engineerid = 3
-
