@@ -203,9 +203,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 $(call inherit-product-if-exists, vendor/htc/shooter/shooter-vendor.mk)
 
-PRODUCT_COPY_FILES += \
-     device/htc/shooter/media_profiles.xml:system/etc/media_profiles.xml
-
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/shooter/media_a1026.mk)
 
