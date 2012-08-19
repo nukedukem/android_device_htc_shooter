@@ -16,5 +16,5 @@
 # Mounts the first usable partition of the specified device
 dev_mount sdcard /mnt/sdcard auto /devices/platform/goldfish_mmc.0 /devices/platform/msm_sdcc.3/mmc_host/mmc1
 
-dev_mount usb /mnt/usbdisk auto /devices/platform/msm_hsusb_host.0/usb1
+dev_mount usbdisk /mnt/usbdisk auto /devices/platform/msm_hsusb_host.0/usb1
 
