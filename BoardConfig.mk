@@ -30,9 +30,6 @@
 # inherit from common msm8660
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
--include vendor/htc/shooter/BoardConfigVendor.mk
-
 TARGET_BOOTLOADER_BOARD_NAME := shooter
 TARGET_PROVIDES_LIBRIL := vendor/htc/shooter/proprietary/libril.so
 
@@ -79,6 +76,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := shooter_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/shooter
 TARGET_PREBUILT_KERNEL := device/htc/shooter/kernAl
 
 TARGET_RECOVERY_INITRC := device/htc/shooter/recovery/init.rc
