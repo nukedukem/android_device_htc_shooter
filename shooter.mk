@@ -37,23 +37,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/init:root/init \
     device/htc/shooter/init.shooter.usb.rc:root/init.shooter.usb.rc \
-    device/htc/shooter/ueventd.shooter.rc:root/ueventd.shooter.rc
-
-PRODUCT_COPY_FILES += device/htc/shooter/init.shooter.rc:root/init.shooter.rc
+    device/htc/shooter/ueventd.shooter.rc:root/ueventd.shooter.rc \
+    device/htc/shooter/init.shooter.rc:root/init.shooter.rc
 
 # BCM4329 BT Firmware
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
 
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/htc/shooter/shooter-vendor.mk)
-
 ## CDMA Sprint stuffs
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.com.google.clientidbase=android-sprint-us \
-	ro.com.google.locationfeatures=1 \
-	ro.cdma.home.operator.numeric=310120 \
-	ro.cdma.home.operator.alpha=Sprint
+    ro.com.google.clientidbase=android-sprint-us \
+    ro.com.google.locationfeatures=1 \
+    ro.cdma.home.operator.numeric=310120 \
+    ro.cdma.home.operator.alpha=Sprint
 
 ## misc
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -87,11 +83,6 @@ PRODUCT_PACKAGES += \
     gps.shooter \
     librs_jni \
     com.android.future.usb.accessory
-
-## cm dsp manager
-PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp
 
 ## dsp Audio
 PRODUCT_COPY_FILES += \
@@ -157,8 +148,7 @@ PRODUCT_COPY_FILES += \
 
 # misc
 PRODUCT_COPY_FILES += \
-    device/htc/shooter/vold.fstab:system/etc/vold.fstab \
-    device/htc/shooter/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/shooter/vold.fstab:system/etc/vold.fstab
 
 ## WiMAX
 PRODUCT_COPY_FILES += \
