@@ -46,13 +46,14 @@ done
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/camera.default.so:obj/lib/hw/camera.default.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libacdbloader.so:obj/lib/libacdbloader.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libacdbmapper.so:obj/lib/libacdbmapper.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/libtilerenderer.so:obj/lib/libtilerenderer.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/hw/camera.default.so:obj/lib/hw/camera.default.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbloader.so:obj/lib/libacdbloader.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbmapper.so:obj/lib/libacdbmapper.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libtilerenderer.so:obj/lib/libtilerenderer.so
 
 PRODUCT_COPY_FILES += \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/xbin/wireless_modem:system/bin/wireless_modem \\
 EOF
 
 LINEEND=" \\"
