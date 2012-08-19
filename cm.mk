@@ -11,7 +11,7 @@ $(call inherit-product, vendor/cm/config/cdma.mk)
 # Inherit WiMAX stuff
 $(call inherit-product, vendor/cm/config/wimax.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_shooter BUILD_FINGERPRINT="sprint/htc_shooter/shooter:4.0.3/IML74K/130920.2:user/release-keys" PRIVATE_BUILD_DESC="2.08.651.2 CL130920 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_shooter BUILD_FINGERPRINT="sprint/htc_shooter/shooter:4.0.3/IML74K/409645.2:user/release-keys" PRIVATE_BUILD_DESC="2.89.651.2 CL409645 release-keys"
 
 TARGET_BOOTANIMATION_NAME := vertical-540x960
 
@@ -19,6 +19,7 @@ PRODUCT_NAME := cm_shooter
 PRODUCT_DEVICE := shooter
 PRODUCT_MODEL := PG86100
 PRODUCT_MANUFACTURER := HTC
+PRODUCT_BRAND := sprint
 
 # Release name and versioning
 -include vendor/cm/config/common_versions.mk
