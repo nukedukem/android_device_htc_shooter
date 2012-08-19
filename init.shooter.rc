@@ -3,8 +3,10 @@ import init.shooter.usb.rc
 on early-init
     export EXTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt/sdcard 0000 system system
+    mkdir /mnt/usbdisk 0775 system system
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
+    symlink /mnt/usbdisk /usbdisk
 
 on early-fs
     mkdir /system
