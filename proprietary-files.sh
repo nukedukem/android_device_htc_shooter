@@ -45,7 +45,7 @@ done
 # limitations under the License.
 
 # Prebuilt libraries that are needed to build open-source libraries
-PRODUCT_COPY_FILES := \\
+PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/camera.default.so:obj/lib/hw/camera.default.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/libacdbloader.so:obj/lib/libacdbloader.so \\
