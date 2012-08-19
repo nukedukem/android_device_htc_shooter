@@ -147,8 +147,7 @@ PRODUCT_COPY_FILES += \
 
 # misc
 PRODUCT_COPY_FILES += \
-    device/htc/shooter/vold.fstab:system/etc/vold.fstab \
-    device/htc/shooter/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/shooter/vold.fstab:system/etc/vold.fstab
 
 ## Camera
 PRODUCT_COPY_FILES += \
