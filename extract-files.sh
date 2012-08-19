@@ -81,6 +81,7 @@ adb pull /system/bin/rmt_storage ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/sound8x60 ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/3D_calibration ../../../vendor/htc/$DEVICE/proprietary
 adb pull /system/bin/3D_calibration_main ../../../vendor/htc/$DEVICE/proprietary
+adb pull /system/lib/libtilerenderer.so ../../../vendor/htc/$DEVICE/proprietary
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -105,74 +106,74 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libaudioalsa.so:obj/lib/libaudioalsa.so \\
     vendor/htc/__DEVICE__/proprietary/libacdbloader.so:obj/lib/libacdbloader.so \\
     vendor/htc/__DEVICE__/proprietary/libacdbmapper.so:obj/lib/libacdbmapper.so \\
-    vendor/htc/__DEVICE__/proprietary/libv8.so:obj/lib/libv8.so
+    vendor/htc/__DEVICE__/proprietary/libtilerenderer.so:obj/lib/libtilerenderer.so
     
 # All the blobs necessary for shooter
 PRODUCT_COPY_FILES += \\
-    vendor/htc/__DEVICE__/proprietary/charging:/system/bin/charging \\
-    vendor/htc/__DEVICE__/proprietary/htc_ebdlogd:/system/bin/htc_ebdlogd \\
-    vendor/htc/__DEVICE__/proprietary/htcbatt:/system/bin/htcbatt \\
-    vendor/htc/__DEVICE__/proprietary/load-modem.sh:/system/bin/load-modem.sh \\
-    vendor/htc/__DEVICE__/proprietary/mpdecision:/system/bin/mpdecision \\
-    vendor/htc/__DEVICE__/proprietary/netmgrd:/system/bin/netmgrd \\
-    vendor/htc/__DEVICE__/proprietary/qmuxd:/system/bin/qmuxd \\
+    vendor/htc/__DEVICE__/proprietary/charging:system/bin/charging \\
+    vendor/htc/__DEVICE__/proprietary/htc_ebdlogd:system/bin/htc_ebdlogd \\
+    vendor/htc/__DEVICE__/proprietary/htcbatt:system/bin/htcbatt \\
+    vendor/htc/__DEVICE__/proprietary/load-modem.sh:system/bin/load-modem.sh \\
+    vendor/htc/__DEVICE__/proprietary/mpdecision:system/bin/mpdecision \\
+    vendor/htc/__DEVICE__/proprietary/netmgrd:system/bin/netmgrd \\
+    vendor/htc/__DEVICE__/proprietary/qmuxd:system/bin/qmuxd \\
     vendor/htc/__DEVICE__/proprietary/thermald:system/bin/thermald \\
     vendor/htc/__DEVICE__/proprietary/wireless_modem:system/bin/wireless_modem \\
     vendor/htc/__DEVICE__/proprietary/wireless_modem:system/xbin/wireless_modem \\
-    vendor/htc/__DEVICE__/proprietary/libaudioalsa.so:/system/lib/libaudioalsa.so \\
-    vendor/htc/__DEVICE__/proprietary/libaudcal.so:/system/lib/libaudcal.so \\
+    vendor/htc/__DEVICE__/proprietary/libaudioalsa.so:system/lib/libaudioalsa.so \\
+    vendor/htc/__DEVICE__/proprietary/libaudcal.so:system/lib/libaudcal.so \\
     vendor/htc/__DEVICE__/proprietary/libacdbmapper.so:system/lib/libacdbmapper.so \\
     vendor/htc/__DEVICE__/proprietary/libacdbloader.so:system/lib/libacdbloader.so \\
-    vendor/htc/__DEVICE__/proprietary/libC2D2.so:/system/lib/libC2D2.so \\
-    vendor/htc/__DEVICE__/proprietary/libcamerapp.so:/system/lib/libcamerapp.so \\
-    vendor/htc/__DEVICE__/proprietary/libcameraSP.so:/system/lib/libcameraSP.so \\
-    vendor/htc/__DEVICE__/proprietary/libcameraface.so:/system/lib/libcameraface.so \\
-    vendor/htc/__DEVICE__/proprietary/libdll.so:/system/lib/libdll.so \\
-    vendor/htc/__DEVICE__/proprietary/libdiag.so:/system/lib/libdiag.so \\
-    vendor/htc/__DEVICE__/proprietary/libidl.so:/system/lib/libidl.so \\
-    vendor/htc/__DEVICE__/proprietary/libdsi_netctrl.so:/system/lib/libdsi_netctrl.so \\
-    vendor/htc/__DEVICE__/proprietary/libdsutils.so:/system/lib/libdsutils.so \\
-    vendor/htc/__DEVICE__/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \\
-    vendor/htc/__DEVICE__/proprietary/libgemini.so:/system/lib/libgemini.so \\
-    vendor/htc/__DEVICE__/proprietary/libgemini2.so:/system/lib/libgemini2.so \\
-    vendor/htc/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \\
-    vendor/htc/__DEVICE__/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \\
-    vendor/htc/__DEVICE__/proprietary/eglsubAndroid.so:/system/lib/egl/eglsubAndroid.so \\
-    vendor/htc/__DEVICE__/proprietary/libgsl.so:/system/lib/libgsl.so \\
-    vendor/htc/__DEVICE__/proprietary/libsc-a2xx.so:/system/lib/libsc-a2xx.so \\
-    vendor/htc/__DEVICE__/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \\
-    vendor/htc/__DEVICE__/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so \\
-    vendor/htc/__DEVICE__/proprietary/libhtc_ril_switch.so:/system/lib/libhtc_ril_switch.so \\
-    vendor/htc/__DEVICE__/proprietary/libmmipl.so:/system/lib/libmmipl.so \\
-    vendor/htc/__DEVICE__/proprietary/libmmmpo.so:/system/lib/libmmmpo.so \\
-    vendor/htc/__DEVICE__/proprietary/libmmjpeg.so:/system/lib/libmmjpeg.so \\
-    vendor/htc/__DEVICE__/proprietary/libmmjps.so:/system/lib/libmmjps.so \\
-    vendor/htc/__DEVICE__/proprietary/libmmjpeg2.so:/system/lib/libmmjpeg2.so \\
-    vendor/htc/__DEVICE__/proprietary/libmm-color-convertor.so:/system/lib/libmm-color-convertor.so \\
-    vendor/htc/__DEVICE__/proprietary/libmm-omxcore.so:/system/lib/libmm-omxcore.so \\
-    vendor/htc/__DEVICE__/proprietary/libmpl.so:/system/lib/libmpl.so \\
-    vendor/htc/__DEVICE__/proprietary/libmllite.so:/system/lib/libmllite.so \\
-    vendor/htc/__DEVICE__/proprietary/libmlplatform.so:/system/lib/libmlplatform.so \\
-    vendor/htc/__DEVICE__/proprietary/libnetmgr.so:/system/lib/libnetmgr.so \\
-    vendor/htc/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
-    vendor/htc/__DEVICE__/proprietary/libOlaEngine.so:/system/lib/libOlaEngine.so \\
-    vendor/htc/__DEVICE__/proprietary/libOpenMAXAL.so:/system/lib/libOpenMAXAL.so \\
-    vendor/htc/__DEVICE__/proprietary/libOpenVG.so:/system/lib/libOpenVG.so \\
-    vendor/htc/__DEVICE__/proprietary/libposteffect.so:/system/lib/libposteffect.so \\
-    vendor/htc/__DEVICE__/proprietary/libqc-opt.so:/system/lib/libqc-opt.so \\
-    vendor/htc/__DEVICE__/proprietary/libqmi.so:/system/lib/libqmi.so \\
-    vendor/htc/__DEVICE__/proprietary/libqdp.so:/system/lib/libqdp.so \\
-    vendor/htc/__DEVICE__/proprietary/libqmiservices.so:/system/lib/libqmiservices.so \\
-    vendor/htc/__DEVICE__/proprietary/libq3dtools_adreno200.so:/system/lib/egl/libq3dtools_adreno200.so \\
-    vendor/htc/__DEVICE__/proprietary/libv8.so:system/lib/libv8.so \\
-    vendor/htc/__DEVICE__/proprietary/camera.default.so:/system/lib/hw/camera.default.so \\
-    vendor/htc/__DEVICE__/proprietary/lights.msm8660.so:/system/lib/hw/lights.msm8660.so \\
-    vendor/htc/__DEVICE__/proprietary/sensors.shooter.so:/system/lib/hw/sensors.shooter.so \\
-    vendor/htc/__DEVICE__/proprietary/logcat2:/system/bin/logcat2 \\
-    vendor/htc/__DEVICE__/proprietary/rmt_storage:/system/bin/rmt_storage \\
-    vendor/htc/__DEVICE__/proprietary/sound8x60:/system/bin/sound8x60 \\
-    vendor/htc/__DEVICE__/proprietary/3D_calibration:/system/bin/3D_calibration \\
-    vendor/htc/__DEVICE__/proprietary/3D_calibration_main:/system/bin/3D_calibration_main
+    vendor/htc/__DEVICE__/proprietary/libC2D2.so:system/lib/libC2D2.so \\
+    vendor/htc/__DEVICE__/proprietary/libcamerapp.so:system/lib/libcamerapp.so \\
+    vendor/htc/__DEVICE__/proprietary/libcameraSP.so:system/lib/libcameraSP.so \\
+    vendor/htc/__DEVICE__/proprietary/libcameraface.so:system/lib/libcameraface.so \\
+    vendor/htc/__DEVICE__/proprietary/libdll.so:system/lib/libdll.so \\
+    vendor/htc/__DEVICE__/proprietary/libdiag.so:system/lib/libdiag.so \\
+    vendor/htc/__DEVICE__/proprietary/libidl.so:system/lib/libidl.so \\
+    vendor/htc/__DEVICE__/proprietary/libdsi_netctrl.so:system/lib/libdsi_netctrl.so \\
+    vendor/htc/__DEVICE__/proprietary/libdsutils.so:system/lib/libdsutils.so \\
+    vendor/htc/__DEVICE__/proprietary/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \\
+    vendor/htc/__DEVICE__/proprietary/libgemini.so:system/lib/libgemini.so \\
+    vendor/htc/__DEVICE__/proprietary/libgemini2.so:system/lib/libgemini2.so \\
+    vendor/htc/__DEVICE__/proprietary/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \\
+    vendor/htc/__DEVICE__/proprietary/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \\
+    vendor/htc/__DEVICE__/proprietary/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \\
+    vendor/htc/__DEVICE__/proprietary/libgsl.so:system/lib/libgsl.so \\
+    vendor/htc/__DEVICE__/proprietary/libsc-a2xx.so:system/lib/libsc-a2xx.so \\
+    vendor/htc/__DEVICE__/proprietary/libhtc_acoustic.so:system/lib/libhtc_acoustic.so \\
+    vendor/htc/__DEVICE__/proprietary/libhtc_ril.so:system/lib/libhtc_ril.so \\
+    vendor/htc/__DEVICE__/proprietary/libhtc_ril_switch.so:system/lib/libhtc_ril_switch.so \\
+    vendor/htc/__DEVICE__/proprietary/libmmipl.so:system/lib/libmmipl.so \\
+    vendor/htc/__DEVICE__/proprietary/libmmmpo.so:system/lib/libmmmpo.so \\
+    vendor/htc/__DEVICE__/proprietary/libmmjpeg.so:system/lib/libmmjpeg.so \\
+    vendor/htc/__DEVICE__/proprietary/libmmjps.so:system/lib/libmmjps.so \\
+    vendor/htc/__DEVICE__/proprietary/libmmjpeg2.so:system/lib/libmmjpeg2.so \\
+    vendor/htc/__DEVICE__/proprietary/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \\
+    vendor/htc/__DEVICE__/proprietary/libmm-omxcore.so:system/lib/libmm-omxcore.so \\
+    vendor/htc/__DEVICE__/proprietary/libmpl.so:system/lib/libmpl.so \\
+    vendor/htc/__DEVICE__/proprietary/libmllite.so:system/lib/libmllite.so \\
+    vendor/htc/__DEVICE__/proprietary/libmlplatform.so:system/lib/libmlplatform.so \\
+    vendor/htc/__DEVICE__/proprietary/libnetmgr.so:system/lib/libnetmgr.so \\
+    vendor/htc/__DEVICE__/proprietary/liboemcamera.so:system/lib/liboemcamera.so \\
+    vendor/htc/__DEVICE__/proprietary/libOlaEngine.so:system/lib/libOlaEngine.so \\
+    vendor/htc/__DEVICE__/proprietary/libOpenMAXAL.so:system/lib/libOpenMAXAL.so \\
+    vendor/htc/__DEVICE__/proprietary/libOpenVG.so:system/lib/libOpenVG.so \\
+    vendor/htc/__DEVICE__/proprietary/libposteffect.so:system/lib/libposteffect.so \\
+    vendor/htc/__DEVICE__/proprietary/libqc-opt.so:system/lib/libqc-opt.so \\
+    vendor/htc/__DEVICE__/proprietary/libqmi.so:system/lib/libqmi.so \\
+    vendor/htc/__DEVICE__/proprietary/libqdp.so:system/lib/libqdp.so \\
+    vendor/htc/__DEVICE__/proprietary/libqmiservices.so:system/lib/libqmiservices.so \\
+    vendor/htc/__DEVICE__/proprietary/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \\
+    vendor/htc/__DEVICE__/proprietary/camera.default.so:system/lib/hw/camera.default.so \\
+    vendor/htc/__DEVICE__/proprietary/lights.msm8660.so:system/lib/hw/lights.msm8660.so \\
+    vendor/htc/__DEVICE__/proprietary/sensors.shooter.so:system/lib/hw/sensors.shooter.so \\
+    vendor/htc/__DEVICE__/proprietary/logcat2:system/bin/logcat2 \\
+    vendor/htc/__DEVICE__/proprietary/rmt_storage:system/bin/rmt_storage \\
+    vendor/htc/__DEVICE__/proprietary/sound8x60:system/bin/sound8x60 \\
+    vendor/htc/__DEVICE__/proprietary/3D_calibration:system/bin/3D_calibration \\
+    vendor/htc/__DEVICE__/proprietary/3D_calibration_main:system/bin/3D_calibration_main \\
+    vendor/htc/__DEVICE__/proprietary/libtilerenderer.so:system/lib/libtilerenderer.so
 EOF
 
 ./setup-makefiles.sh
