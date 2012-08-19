@@ -37,16 +37,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/init:root/init \
     device/htc/shooter/init.shooter.usb.rc:root/init.shooter.usb.rc \
-    device/htc/shooter/ueventd.shooter.rc:root/ueventd.shooter.rc
-
-PRODUCT_COPY_FILES += device/htc/shooter/init.shooter.rc:root/init.shooter.rc
+    device/htc/shooter/ueventd.shooter.rc:root/ueventd.shooter.rc \
+    device/htc/shooter/init.shooter.rc:root/init.shooter.rc
 
 # BCM4329 BT Firmware
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
-
-## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/htc/shooter/shooter-vendor.mk)
 
 ## CDMA Sprint stuffs
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -86,11 +82,6 @@ PRODUCT_PACKAGES += \
     gps.shooter \
     librs_jni \
     com.android.future.usb.accessory
-
-## cm dsp manager
-PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp
 
 ## dsp Audio
 PRODUCT_COPY_FILES += \
@@ -187,12 +178,19 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/dmagent:system/bin/dmagent \
     device/htc/shooter/prebuilt/wimaxDaemon:system/bin/wimaxDaemon
 
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-    librs_jni
+## JB Adreno
+PRODUCT_COPY_FILES += \
+    device/htc/shooter/prebuilt/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
+    device/htc/shooter/prebuilt/libC2D2.so:system/lib/libC2D2.so \
+    device/htc/shooter/prebuilt/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
+    device/htc/shooter/prebuilt/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
+    device/htc/shooter/prebuilt/libGLESv2S3D_adreno200.so:system/lib/egl/libGLESv2S3D_adreno200.so \
+    device/htc/shooter/prebuilt/libGLESv2_adreno200.so:libGLESv2_adreno200.so \
+    device/htc/shooter/prebuilt/libOpenVG.so:system/lib/libOpenVG.so \
+    device/htc/shooter/prebuilt/libc2d2_z180.so:system/lib/libc2d2_z180.so \
+    device/htc/shooter/prebuilt/libgsl.so:system/lib/libgsl.so \
+    device/htc/shooter/prebuilt/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
+    device/htc/shooter/prebuilt/libsc-a2xx.so:system/lib/libsc-a2xx.so
 
 # for bugmailer
 ifneq ($(TARGET_BUILD_VARIANT),user)
