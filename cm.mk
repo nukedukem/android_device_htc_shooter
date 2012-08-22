@@ -18,5 +18,7 @@ PRODUCT_DEVICE := shooter
 PRODUCT_MODEL := PG86100
 PRODUCT_MANUFACTURER := HTC
 
+TARGET_BOOTANIMATION_NAME := vertical-540
+
 # Release name and versioning
 -include vendor/cm/config/common_versions.mk
