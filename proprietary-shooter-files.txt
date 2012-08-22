@@ -15,6 +15,7 @@ system/lib/libaudcal.so
 system/lib/libaudioalsa.so
 system/lib/libacdbloader.so
 system/lib/libacdbmapper.so
+system/lib/libC2D2.so
 system/lib/libcamerapp.so
 system/lib/libcameraface.so
 system/lib/libcameraSP.so
