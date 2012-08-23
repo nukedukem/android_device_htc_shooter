@@ -74,7 +74,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1394606080
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5242880
 BOARD_FLASH_BLOCK_SIZE := 262144
 # BOARD_CUSTOM_GRAPHICS := ../../../device/htc/shooter/recovery/graphics.c
-#TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
+TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 
 # Try to build the kernel
 TARGET_KERNEL_SOURCE := kernel/htc/shooter
