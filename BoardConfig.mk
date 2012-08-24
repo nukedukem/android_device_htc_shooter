@@ -50,6 +50,13 @@ TARGET_HARDWARE_3D := true
 
 BOARD_HAVE_SQN_WIMAX := true
 
+# Audio
+BOARD_HAVE_HTC_AUDIO := true
+
+# Wifi
+WIFI_DRIVER_MODULE_NAME          := bcmdhd
+WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcm4329.ko"
+
 # cat /proc/emmc
 #dev:        size     erasesize name
 # mmcblk0p17: 00040000 00000200 "misc"
