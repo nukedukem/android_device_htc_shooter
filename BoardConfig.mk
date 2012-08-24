@@ -54,8 +54,8 @@ BOARD_HAVE_SQN_WIMAX := true
 BOARD_HAVE_HTC_AUDIO := true
 
 # Wifi
-WIFI_DRIVER_MODULE_NAME          := bcmdhd
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcm4329.ko"
+WIFI_DRIVER_MODULE_NAME := bcmdhd
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/bcm4329.ko"
 
 # cat /proc/emmc
 #dev:        size     erasesize name
