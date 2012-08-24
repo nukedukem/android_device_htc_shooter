@@ -24,17 +24,10 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-# inherit from the proprietary version
--include vendor/htc/shooter/BoardConfigVendor.mk
-
 # inherit from common msm8660
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
--include vendor/htc/shooter/BoardConfigVendor.mk
-
 TARGET_BOOTLOADER_BOARD_NAME := shooter
-TARGET_PROVIDES_LIBRIL := vendor/htc/shooter/proprietary/libril.so
 
 BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=shooter no_console_suspend=1
 BOARD_KERNEL_BASE := 0x48000000
@@ -42,7 +35,7 @@ BOARD_KERNEL_PAGE_SIZE := 2048
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := shooter
 
-COMMON_GLOBAL_CFLAGS += -DBOARD_HAVE_SQN_WIMAX -DQCOM_NO_SECURE_PLAYBACK
+COMMON_GLOBAL_CFLAGS += -DBOARD_HAVE_SQN_WIMAX -DQCOM_ROTATOR_KERNEL_FORMATS
 
 BOARD_HTC_3D_SUPPORT := true
 

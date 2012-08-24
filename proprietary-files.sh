@@ -46,11 +46,11 @@ done
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/hw/camera.default.so:obj/lib/hw/camera.default.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbloader.so:obj/lib/libacdbloader.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbmapper.so:obj/lib/libacdbmapper.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libtilerenderer.so:obj/lib/libtilerenderer.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libtilerenderer.so:obj/lib/libtilerenderer.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libv8.so:obj/lib/libv8.so
 
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/xbin/wireless_modem:system/bin/wireless_modem \\
@@ -81,7 +81,6 @@ done
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-WEBCORE_ACCELERATED_SCROLLING := true
 EOF
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__VENDOR__/$VENDOR/g > ../../../$DEVICEOUTDIR/$DEVICE-vendor.mk

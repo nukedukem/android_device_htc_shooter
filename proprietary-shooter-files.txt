@@ -48,6 +48,7 @@ system/lib/libqdp.so
 system/lib/libqmi.so
 system/lib/libqmiservices.so
 system/lib/libtilerenderer.so
+system/lib/libv8.so
 system/lib/hw/camera.default.so
 system/lib/hw/lights.msm8660.so
 system/lib/hw/sensors.shooter.so
