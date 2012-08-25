@@ -184,7 +184,7 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
     device/htc/shooter/prebuilt/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
     device/htc/shooter/prebuilt/libGLESv2S3D_adreno200.so:system/lib/egl/libGLESv2S3D_adreno200.so \
-    device/htc/shooter/prebuilt/libGLESv2_adreno200.so:libGLESv2_adreno200.so \
+    device/htc/shooter/prebuilt/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
     device/htc/shooter/prebuilt/libOpenVG.so:system/lib/libOpenVG.so \
     device/htc/shooter/prebuilt/libc2d2_z180.so:system/lib/libc2d2_z180.so \
     device/htc/shooter/prebuilt/libgsl.so:system/lib/libgsl.so \
