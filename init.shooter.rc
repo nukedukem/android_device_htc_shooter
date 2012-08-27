@@ -50,7 +50,6 @@ on early-fs
     symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4329.hcd
 
     symlink /system/vendor/etc/audio_effects.conf /vendor/etc/audio_effects.conf
-    symlink /system/vendor/etc/audio_policy.conf /vendor/etc/audio_policy.conf
 
     mount ext4 /dev/block/mmcblk0p23 /system wait ro data=ordered noauto_da_alloc
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
