@@ -4,14 +4,11 @@ on early-init
 	export EXTERNAL_STORAGE /storage/sdcard0
 	mkdir /storage 0775 root system
 	mkdir /storage/sdcard0 0000 system system
+        mkdir /storage/sdcard1 0000 system system
 	# for backwards compatibility
 	symlink /storage/sdcard0 /sdcard
 	symlink /storage/sdcard0 /mnt/sdcard
-	
-	# create directory for mounting usb drives
-	mkdir /storage/usbdisk 0775 system system
-	symlink /storage/usbdisk /mnt/usbdisk
-	symlink /mnt/usbdisk /usbdisk
+        mkdir /mnt/usbdisk 0755 system system
 
 on early-fs
     mkdir /system
