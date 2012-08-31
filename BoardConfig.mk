@@ -44,7 +44,8 @@ TARGET_HARDWARE_3D := true
 BOARD_HAVE_SQN_WIMAX := true
 
 # Audio
-BOARD_HAVE_HTC_AUDIO := true
+#BOARD_HAVE_HTC_AUDIO := true
+LOCAL_CFLAGS += -DHTC_ACOUSTIC_AUDIO -DLEGACY_QCOM_VOICE
 
 # cat /proc/emmc
 #dev:        size     erasesize name
