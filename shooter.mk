@@ -207,6 +207,10 @@ PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
     device/htc/shooter/media_profiles.xml:system/etc/media_profiles.xml
 
+# Fix USB transfer speeds
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vold.umsdirtyratio=20
+
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/shooter/media_a1026.mk)
 
