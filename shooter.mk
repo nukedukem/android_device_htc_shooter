@@ -69,14 +69,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gps.shooter
 
-## qcom/media
-PRODUCT_PACKAGES += \
-    libstagefrighthw \
-    libOmxCore \
-    libOmxVdec \
-    libOmxVenc \
-    libdivxdrmdecrypt
-
 ## misc
 PRODUCT_PACKAGES += \
     gps.shooter \
