@@ -48,7 +48,10 @@ done
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbloader.so:obj/lib/libacdbloader.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbmapper.so:obj/lib/libacdbmapper.so
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbmapper.so:obj/lib/libacdbmapper.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libcamera_client.so:obj/lib/libcamera_client.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libcameraservice.so:obj/lib/libcameraservice.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libv8.so:obj/lib/libv8.so
 
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/xbin/wireless_modem:system/bin/wireless_modem \\
