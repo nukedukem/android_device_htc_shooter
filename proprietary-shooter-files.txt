@@ -26,7 +26,6 @@ system/lib/libchromatix_s5k3h1gx_default_video.so
 system/lib/libchromatix_s5k3h1gx_hfr.so
 system/lib/libchromatix_s5k3h1gx_preview.so
 system/lib/libchromatix_s5k3h1gx_zsl.so
-system/lib/libdiag.so
 system/lib/libdll.so
 system/lib/libdsi_netctrl.so
 system/lib/libdsutils.so
@@ -38,7 +37,6 @@ system/lib/libhtc_ril_switch.so
 system/lib/libidl.so
 system/lib/libmllite.so
 system/lib/libmlplatform.so
-system/lib/libmm-color-convertor.so
 system/lib/libmm-omxcore.so
 system/lib/libmmipl.so
 system/lib/libmmjpeg.so
@@ -51,12 +49,10 @@ system/lib/libnetmgr.so
 system/lib/liboemcamera.so
 system/lib/libOlaEngine.so
 system/lib/libOpenMAXAL.so
-system/lib/libqc-opt.so
 system/lib/libposteffect.so
 system/lib/libqdp.so
 system/lib/libqmi.so
 system/lib/libqmiservices.so
-system/lib/libv8.so
 system/lib/hw/camera.default.so
 system/lib/hw/lights.msm8660.so
 system/lib/hw/sensors.shooter.so
