@@ -165,20 +165,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/dmagent:system/bin/dmagent \
     device/htc/shooter/prebuilt/wimaxDaemon:system/bin/wimaxDaemon
 
-## JB Adreno
-PRODUCT_COPY_FILES += \
-    device/htc/shooter/prebuilt/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
-    device/htc/shooter/prebuilt/libC2D2.so:system/lib/libC2D2.so \
-    device/htc/shooter/prebuilt/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
-    device/htc/shooter/prebuilt/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
-    device/htc/shooter/prebuilt/libGLESv2S3D_adreno200.so:system/lib/egl/libGLESv2S3D_adreno200.so \
-    device/htc/shooter/prebuilt/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-    device/htc/shooter/prebuilt/libOpenVG.so:system/lib/libOpenVG.so \
-    device/htc/shooter/prebuilt/libc2d2_z180.so:system/lib/libc2d2_z180.so \
-    device/htc/shooter/prebuilt/libgsl.so:system/lib/libgsl.so \
-    device/htc/shooter/prebuilt/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
-    device/htc/shooter/prebuilt/libsc-a2xx.so:system/lib/libsc-a2xx.so
-
 # for bugmailer
 ifneq ($(TARGET_BUILD_VARIANT),user)
     PRODUCT_PACKAGES += send_bug
@@ -190,6 +176,7 @@ endif
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 $(call inherit-product-if-exists, vendor/htc/shooter/shooter-vendor.mk)
+$(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
 
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
