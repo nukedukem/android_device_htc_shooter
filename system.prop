@@ -13,8 +13,7 @@ debug.qctwa.preservebuf = 1
 
 #cm qcom build lub
 com.qc.hardware=true
-com.qc.hdmi_out=true
-ro.hdmi.enable=true
+com.qc.hdmi_out=false
 
 # board has 3D panel
 #persist.user.panel3D = 1
