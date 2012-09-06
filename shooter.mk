@@ -141,10 +141,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/shooter/vold.fstab:system/etc/vold.fstab
 
-## Camera
-PRODUCT_COPY_FILES += \
-    device/htc/shooter/prebuilt/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so
-
 ## WiMAX
 PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/libcryp98.so:system/lib/libcryp98.so \
