@@ -133,12 +133,9 @@ PRODUCT_COPY_FILES += device/htc/shooter/prebuilt/thermald.conf:system/etc/therm
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Broadcom Network Firmware
-#PRODUCT_COPY_FILES += \
-#    device/htc/shooter/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
-#    device/htc/shooter/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
-
-# Wifi
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
+PRODUCT_COPY_FILES += \
+    device/htc/shooter/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
+    device/htc/shooter/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
 
 # misc
 PRODUCT_COPY_FILES += \
