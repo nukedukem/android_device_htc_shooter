@@ -40,8 +40,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/ramdisk/ueventd.shooter.rc:root/ueventd.shooter.rc \
     device/htc/shooter/ramdisk/init.shooter.rc:root/init.shooter.rc
 
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
-
 # BCM4329 BT Firmware
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd
@@ -133,6 +131,11 @@ PRODUCT_COPY_FILES += device/htc/shooter/prebuilt/thermald.conf:system/etc/therm
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Broadcom Network Firmware
+PRODUCT_COPY_FILES += \
+    device/htc/shooter/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
+    device/htc/shooter/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
 
 # misc
 PRODUCT_COPY_FILES += \
