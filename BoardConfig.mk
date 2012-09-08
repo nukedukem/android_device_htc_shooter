@@ -91,5 +91,9 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
 
+# Wifi
+WIFI_DRIVER_MODULE_NAME          := bcmdhd
+WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcmdhd.ko"
+
 # Custom LUN File Path
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
