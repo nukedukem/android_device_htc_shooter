@@ -9,7 +9,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 $(call inherit-product, vendor/cm/config/cdma.mk)
 
 # Inherit WiMAX stuff
-#$(call inherit-product, vendor/cm/config/wimax.mk)
+$(call inherit-product, vendor/cm/config/wimax.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_shooter BUILD_FINGERPRINT="sprint/htc_shooter/shooter:4.0.3/IML74K/130920.2:user/release-keys" PRIVATE_BUILD_DESC="2.08.651.2 CL130920 release-keys"
 
