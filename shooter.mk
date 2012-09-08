@@ -163,7 +163,8 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/wimaxDhcp.conf:system/etc/wimax/dhcp/wimaxDhcp.conf \
     device/htc/shooter/prebuilt/libhtcdm.so:system/lib/libhtcdm.so \
     device/htc/shooter/prebuilt/dmagent:system/bin/dmagent \
-    device/htc/shooter/prebuilt/wimaxDaemon:system/bin/wimaxDaemon
+    device/htc/shooter/prebuilt/wimaxDaemon:system/bin/wimaxDaemon \
+    device/htc/shooter/prebuilt/libwimaxjni.so:system/lib/libwimaxjni.so
 
 # for bugmailer
 ifneq ($(TARGET_BUILD_VARIANT),user)
