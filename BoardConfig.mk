@@ -43,9 +43,6 @@ TARGET_HARDWARE_3D := true
 
 BOARD_HAVE_SQN_WIMAX := true
 
-# Audio
-BOARD_HAVE_HTC_AUDIO := true
-
 # cat /proc/emmc
 #dev:        size     erasesize name
 # mmcblk0p17: 00040000 00000200 "misc"
