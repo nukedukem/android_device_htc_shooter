@@ -11,6 +11,9 @@
 /dev/genlock            0666    root        root
 /dev/graphics/*         0660    root        graphics
 
+# block devices
+/dev/block/mmcblk0p21   0644    root        root
+
 # camera
 /dev/gemini0            0660    system      camera
 /dev/msm_camera/*       0660    system      camera
