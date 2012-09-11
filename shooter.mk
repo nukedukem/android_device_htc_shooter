@@ -132,11 +132,6 @@ PRODUCT_COPY_FILES += device/htc/shooter/prebuilt/thermald.conf:system/etc/therm
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# Broadcom Network Firmware
-PRODUCT_COPY_FILES += \
-    device/htc/shooter/firmware/fw_bcmdhd.bin:system/vendor/firmware/fw_bcmdhd.bin \
-    device/htc/shooter/firmware/fw_bcmdhd_apsta.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin
-
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
 # misc
