@@ -134,8 +134,10 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Broadcom Network Firmware
 PRODUCT_COPY_FILES += \
-    device/htc/shooter/firmware/fw_bcm4329.bin:system/vendor/firmware/fw_bcm4329.bin \
-    device/htc/shooter/firmware/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin
+    device/htc/shooter/firmware/fw_bcmdhd.bin:system/vendor/firmware/fw_bcmdhd.bin \
+    device/htc/shooter/firmware/fw_bcmdhd_apsta.bin:system/vendor/firmware/fw_bcmdhd_apsta.bin
+
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
 # misc
 PRODUCT_COPY_FILES += \
@@ -173,8 +175,6 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
         system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
         system/extras/bugmailer/send_bug:system/bin/send_bug
 endif
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0
