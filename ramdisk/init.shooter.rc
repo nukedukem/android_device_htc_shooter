@@ -208,11 +208,9 @@ on boot
     # HTC Phone Call
     chown radio /sys/module/gpio_event/parameters/phone_call_status
 
-on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
-on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 # Define TCP buffer sizes for various networks
