@@ -22,7 +22,7 @@ MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \\
-    vendor/__MANUFACTURER__/__DEVICE__/proprietary/system/lib/hw/camera.default.so:obj/lib/hw/camera.default.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/hw/camera.default.so:obj/lib/hw/camera.default.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libaudioalsa.so:obj/lib/libaudioalsa.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbloader.so:obj/lib/libacdbloader.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/system/lib/libacdbmapper.so:obj/lib/libacdbmapper.so \\
