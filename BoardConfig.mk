@@ -24,6 +24,8 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
+USE_CAMERA_STUB := true
+
 # inherit from common msm8660
 -include device/htc/msm8660-common/BoardConfigCommon.mk
 
