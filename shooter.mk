@@ -180,7 +180,7 @@ $(call inherit-product, vendor/qcom/proprietary/qcom-vendor.mk)
 
 PRODUCT_COPY_FILES += \
     device/htc/msm8660-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    device/htc/shooter/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/msm8660-common/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Fix USB transfer speeds
 PRODUCT_PROPERTY_OVERRIDES += \
