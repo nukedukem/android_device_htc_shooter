@@ -66,26 +66,15 @@ BOARD_HAVE_SQN_WIMAX := true
 WIFI_DRIVER_MODULE_NAME          := bcmdhd
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcmdhd.ko"
 
+# Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 435941376
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1394606080
 BOARD_BOOTIMAGE_PARTITION_SIZE := 5242880
 BOARD_FLASH_BLOCK_SIZE := 262144
-# BOARD_CUSTOM_GRAPHICS := ../../../device/htc/shooter/recovery/graphics.c
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := shooter_defconfig
-
-TARGET_RECOVERY_INITRC := device/htc/shooter/recovery/init.rc
-BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
-BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
-BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
-BOARD_USES_MMCUTILS := true
-BOARD_HAS_NO_MISC_PARTITION := true
-BOARD_HAS_NO_SELECT_BUTTON := true
-
-TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 960
