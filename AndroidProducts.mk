@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/shooter.mk
+    $(LOCAL_DIR)/full_shooter.mk
